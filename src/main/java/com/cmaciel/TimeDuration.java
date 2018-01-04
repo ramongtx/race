@@ -22,12 +22,12 @@ public class TimeDuration implements Comparable<TimeDuration> {
 		int remainder = seconds % 60;
 		
 		if (hours > 0) {
-			return String.format("%2dh %2dm %2ds", hours, minutes, remainder);
+			return String.format("%dh %dm %ds", hours, minutes, remainder);
 		} else if (minutes > 0) {
-			return String.format("%2dm %2ds", minutes, remainder);
+			return String.format("%dm %ds", minutes, remainder);
 		}
 		
-		return String.format("%2ds", remainder);
+		return String.format("%ds", remainder);
 	}
 
 	public int compareTo(TimeDuration other) {

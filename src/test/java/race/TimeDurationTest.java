@@ -15,8 +15,8 @@ public class TimeDurationTest {
 		System.out.println(new TimeDuration(7242).toString());
 		System.out.println(new TimeDuration(0).toString());
 		assertEquals(new TimeDuration(732).toString(), "12m 12s");
-		assertEquals(new TimeDuration(7242).toString(), " 2h  0m 42s");
-		assertEquals(new TimeDuration(0).toString(), " 0s");
+		assertEquals(new TimeDuration(7242).toString(), "2h 0m 42s");
+		assertEquals(new TimeDuration(0).toString(), "0s");
 	}
 	
 	@Test
