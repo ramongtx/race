@@ -1,6 +1,6 @@
 package com.cmaciel;
 
-public class TimeDuration {
+public class TimeDuration implements Comparable<TimeDuration> {
 	private int seconds;
 
 	public TimeDuration(int seconds) throws BadBadValueException {
@@ -28,6 +28,10 @@ public class TimeDuration {
 		}
 		
 		return String.format("%2ds", remainder);
+	}
+
+	public int compareTo(TimeDuration other) {
+		return seconds - other.getSeconds();
 	}
 
 }
